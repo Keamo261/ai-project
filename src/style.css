@@ -1,7 +1,10 @@
 body {
-  background-color: bisque;
   font-family: "Spectral", serif;
   font-weight: 300;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000215;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/201/original/black-night.gif?1724784144");
 }
 header {
   margin-bottom: 30px;
@@ -11,7 +14,7 @@ h1 {
   font-weight: 800;
   font-size: 36px;
   line-height: 1.5;
-  color: brown;
+  color: royalblue;
 }
 form {
   display: flex;
@@ -19,9 +22,10 @@ form {
 footer {
   text-align: center;
   margin-top: 30px;
+  color: #cdcaff;
 }
 a {
-  color: brown;
+  color: royalblue;
 }
 .container {
   margin: 120px auto;
@@ -29,17 +33,16 @@ a {
 }
 .instructions {
   padding: 16px;
-  border: 1px solid brown;
   width: 80%;
   font-size: 16px;
   border-radius: 20px;
   line-height: 20px;
-  color: black;
+  color: navy;
 }
 .submit-button {
   margin-left: 10px;
-  background-color: burlywood;
-  color: brown;
+  background-color: navy;
+  color: whitesmoke;
   border: none;
   border-radius: 50px;
   padding: 14px 24px;
@@ -52,27 +55,33 @@ a {
 .poem {
   font-size: 18px;
   font-weight: bold;
-  line-height: 2;
+  line-height: 1.8;
   padding: 20px;
   border-radius: 8px;
-  border-left: 4px solid navy;
+  border-left: 4px solid royalblue;
+  color: #cdcaff;
 }
 .hidden {
   display: none;
 }
 .form-container {
   padding: 30px;
-  background-color: blanchedalmond;
+  background: radial-gradient(
+    circle at 74.2% 50.9%,
+    rgb(14, 72, 222) 5.2%,
+    rgb(3, 22, 65) 75.3%
+  );
   border-radius: 10px;
-  border: 1px dotted brown;
   margin-bottom: 30px;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  opacity: 0.9;
 }
 .hint {
   line-height: 1.5;
   font-size: 12px;
   margin-top: 5px;
   opacity: 0.6;
+  color: #cdcaff;
 }
 @keyframes blink-animation {
   to {
