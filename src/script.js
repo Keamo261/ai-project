@@ -1,11 +1,22 @@
-function generatePoem(event) {
-  event.preventDefault();
-
+function displayPoem(response) {
   new Typewriter("#poem", {
-    strings: "Roses are red",
+    strings: response.data.answer,
     autoStart: true,
     delay: 60,
   });
+}
+
+function generatePoem(event) {
+  event.preventDefault();
+
+  let instructionsInput = document.querySelector("#user-instructions");
+  let apiKey = "21a849d40ft0a45f399f9odf6fa4fb86";
+  let prompt = `User instructions: Generate a poem about ${instructionsInput}`;
+  let context =
+    "You are an expert in poems about the night. Generate an 8 line poem about the night. Separate each line with a <br />. Make sure to follow the user instructions.";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(displayPoem);
 }
 
 let formElement = document.querySelector("#generator");
