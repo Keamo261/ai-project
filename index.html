@@ -11,23 +11,26 @@
   <body>
     <div class="container">
       <header>
-        <h1>Poem Generator</h1>
+        <h1>AI Night-Time Poem Generator</h1>
       </header>
 
       <main>
-        <form id="generator">
-          <input
-            type="text"
-            placeholder="Enter a topic"
-            autofocus
-            required
-            autocomplete="off"
-            class="intructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="poem" id="poem"></div>
+        <div class="form-container">
+          <form id="generator">
+            <input
+              type="text"
+              placeholder="Enter a night related topic"
+              autofocus
+              required
+              autocomplete="off"
+              class="intructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: stars, night sky, moon</div>
+        </div>
+        <div class="poem hidden" id="poem"></div>
       </main>
 
       <footer>
